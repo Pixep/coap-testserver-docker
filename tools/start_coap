@@ -1,0 +1,2 @@
+#!/bin/bash
+java -jar /root/src/californium/demo-apps/run/cf-plugtest-server-1.1.0-SNAPSHOT.jar
