@@ -1,9 +1,11 @@
-# CoAP Testserver
+## CoAP Testserver
 
 This Dockerfile starts a CoAP test server using
 <a href="https://github.com/eclipse/Californium/">Californium</a>. It will bind on CoAP default UDP port 5683.
 
-# Usage
+This work is based on Jens Dede 'coap-testserver'.
+
+## Usage
 Start the server and expose UDP port 5683.
 ```
 docker run -name coap-testserver -d --rm -p 5683:5683/udp aleravat/coap-testserver
