@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:16.04
 
 MAINTAINER Adrien Leravat <Pixep@users.noreply.github.com>
 
@@ -12,6 +12,7 @@ RUN mkdir -p /root/src/
 WORKDIR /root/src
 RUN git clone https://github.com/eclipse/californium.git
 WORKDIR /root/src/californium
+RUN git checkout tags/1.0.6
 
 # Building is not necessary: Binaries are in the repository.
 RUN mvn clean install
