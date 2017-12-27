@@ -19,9 +19,9 @@ RUN git checkout tags/1.0.6
 RUN mvn clean install -q -DskipTests
 
 WORKDIR /root
-ADD tools /root
-RUN chmod +x start_coap
+ADD scripts /root/scripts
+RUN chmod +x /root/scripts/*
 
 EXPOSE 5683/udp
 
-CMD ["/root/start_coap"]
+CMD ["/root/scripts/start-plugtest-server.sh"]
