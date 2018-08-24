@@ -16,6 +16,8 @@ If you need to access the test server with a static IP, you can redirect traffic
 docker run --name coap-test-server -d --rm -p 172.16.177.50:5683:5683/udp aleravat/coap-test-server:latest
 ```
 
+You can also get the current IP address of the container from its id. Use `docker ps` to identify its id, and then `docker inspect <id> | grep IPAddress`.
+
 ### Credits
 
 Thanks to Jens Dede, whose Docker 'coap-testserver' was the base for this work.
