@@ -3,7 +3,7 @@ FROM ubuntu:16.04
 MAINTAINER Adrien Leravat <Pixep@users.noreply.github.com>
 
 # Install prerequisites
-RUN echo nameserver 8.8.8.8 > /etc/resolv.conf
+CMD echo nameserver 8.8.8.8 >> /etc/resolv.conf
 RUN apt-get update && apt-get -y install git maven default-jdk
 
 RUN mkdir -p /root/src/
